@@ -29,10 +29,31 @@ $L:     1600px;
 // main will be one grid container
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "expl expl . part part part . ."
+                       ". bene bene . . . . ."
+                       "reqs reqs reqs reqs reqs . . .";
   border: 3px solid $gold;
+  div {
+    border: 2px solid $red;
+  }
 }
 
-.main > div{
-  border: 2px solid $red;
+.explanation {
+  grid-area: expl;
+}
+.participation {
+  grid-area: part;
+}
+
+.benefits {
+  grid-area: bene;
+}
+
+.requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-area: reqs;
+  grid-gap: 1em;
+
 }
