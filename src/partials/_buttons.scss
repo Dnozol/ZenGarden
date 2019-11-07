@@ -8,17 +8,17 @@
         family: $secondary-font;
     }
 
-    color: $color-5;
+    color: $platinum;
     padding: 0.6em 2.2em;
     cursor: pointer;
-    background: $color-1;
+    background: $darkblue;
 
     &:focus {
         outline: none;
     }
 
     .no-touch &:hover {
-        background: lighten($color-1, 5%);
+        background: lighten($darkblue, 5%);
     }
 
     &.btn-success {
@@ -38,13 +38,13 @@
     }
 
     &.btn-outline {
-        color: $color-1;
+        color: $darkblue;
         background: transparent;
-        box-shadow: inset 0 0 0 1px $color-1;
+        box-shadow: inset 0 0 0 1px $darkblue;
 
         .no-touch &:hover {
-            color: $color-5;
-            background: $color-1;
+            color: $platinum;
+            background: $darkblue;
         }
     }
 
@@ -55,5 +55,5 @@
 
 .cd-buttons .cd-box:nth-of-type(2) span {
     /* CSS class name color */
-    color: $color-1;
+    color: $darkblue;
 }

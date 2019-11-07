@@ -457,62 +457,62 @@ section {
 	}
 
 	li:nth-of-type(1) .cd-color-swatch {
-		background: $color-1;
+		background: $darkblue;
 
 		&::before {
-			background: lighten($color-1, 5%);
+			background: lighten($darkblue, 5%);
 		}
 
 		&::after {
-			background: darken($color-1, 5%);
+			background: darken($lightblue, 5%);
 		}
 	}
 
 	li:nth-of-type(2) .cd-color-swatch {
-		background: $color-2;
+		background: $lightblue;
 
 		&::before {
-			background: lighten($color-2, 5%);
+			background: lighten($lightblue, 5%);
 		}
 
 		&::after {
-			background: darken($color-2, 5%);
+			background: darken($lightblue, 5%);
 		}
 	}
 
 	li:nth-of-type(3) .cd-color-swatch {
-		background: $color-3;
+		background: $white;
 
 		&::before {
-			background: lighten($color-3, 5%);
+			background: lighten($white, 5%);
 		}
 
 		&::after {
-			background: darken($color-3, 5%);
+			background: darken($white, 5%);
 		}
 	}
 
 	li:nth-of-type(4) .cd-color-swatch {
-		background: $color-4;
+		background: $red;
 
 		&::before {
-			background: lighten($color-4, 5%);
+			background: lighten($red, 5%);
 		}
 
 		&::after {
-			background: darken($color-4, 5%);
+			background: darken($red, 5%);
 		}
 	}
 
 	li:nth-of-type(5) .cd-color-swatch {
-		background: $color-5;
+		background: $platinum;
 
 		&::before {
-			background: lighten($color-5, 5%);
+			background: lighten($platinum, 5%);
 		}
 
 		&::after {
-			background: darken($color-5, 5%);
+			background: darken($platinum, 5%);
 		}
 	}
 
@@ -551,7 +551,7 @@ section {
 
 	h1::before {
 		content: 'Aa - ';
-		color: $color-1;
+		color: $darkblue;
 	}
 }
 
