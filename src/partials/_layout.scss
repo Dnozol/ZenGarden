@@ -29,12 +29,16 @@ $L:     1600px;
 // main will be one grid container
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "expl expl . part part part . ."
-                       ". bene bene . . . . ."
-                       "reqs reqs reqs reqs reqs . . .";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". expl expl . reqs reqs . "
+                       ". expl expl . reqs reqs . "
+                       ". . . . reqs reqs . "
+                       ". part part . . . ."
+                       ". part part . bene bene ."
+                       ". part part . bene bene ."
+                       "foot foot foot foot foot foot foot";
   border: 3px solid $gold;
-  div {
+  > div {
     border: 2px solid $red;
   }
 }
@@ -47,13 +51,30 @@ $L:     1600px;
 }
 
 .benefits {
+  color:$white;
+  p { 
+    background-color:$lightblue;
+  }
   grid-area: bene;
 }
 
 .requirements {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-area: reqs;
-  grid-gap: 1em;
+  color: $white;
+  background-color:$darkblue;
+  > p {
+    color:$white;
+    border: 2px solid $gold;
+    margin: 1em;
+  }
+  > h3 {
+    margin: auto;
+    text-align: center;
+  }
 
+}
+
+footer {
+  grid-area: foot;
+  background: $gold;
 }
