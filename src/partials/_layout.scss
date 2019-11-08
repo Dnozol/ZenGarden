@@ -19,6 +19,11 @@ $L:     1600px;
   }
 }
 
+//header image
+#zen-intro header {
+  background-image: url(../images/comic.jpeg);
+}
+
 // super light grid - it works with the .cd-container class inside style.scss
 
 @mixin column($percentage, $float-direction:left) {
@@ -77,8 +82,4 @@ $L:     1600px;
 footer {
   grid-area: foot;
   background: $gold;
-}
-
-#zen-intro header {
-  background-image: url(../images/comic.jpeg);
 }
