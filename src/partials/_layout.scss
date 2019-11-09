@@ -28,14 +28,15 @@ $L:     1600px;
 
 // main will be one grid container
 .main {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". expl expl . reqs reqs . "
-                       ". expl expl . reqs reqs . "
-                       ". . . . reqs reqs . "
-                       ". part part . . . ."
-                       ". part part . bene bene ."
-                       ". part part . bene bene ."
+  grid-template-areas: ". expl expl . part part . "
+                       ". expl expl . part part . "
+                       ". . . . part part . "
+                       ". reqs reqs . . . ."
+                       ". reqs reqs . bene bene ."
+                       ". reqs reqs . . . ."
                        "foot foot foot foot foot foot foot";
   border: 3px solid $gold;
   > div {
@@ -45,15 +46,40 @@ $L:     1600px;
 
 .explanation {
   grid-area: expl;
+  color: $white;
+  background-color:$lightblue;
+  > p {
+    color:$white;
+    border: 2px solid $gold;
+    margin: 1em;
+  }
+  > h3 {
+    margin: auto;
+    text-align: center;
+  }
 }
 .participation {
   grid-area: part;
+  color: $white;
+  background-color:$darkblue;
+  > p {
+    color:$white;
+    border: 2px solid $gold;
+    margin: 1em;
+  }
+  > h3 {
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .benefits {
+  background-color:$lightblue;
   color:$white;
-  p { 
-    background-color:$lightblue;
+
+  > h3 {
+    margin: auto;
+    text-align: center;
   }
   grid-area: bene;
 }
@@ -77,4 +103,15 @@ $L:     1600px;
 footer {
   grid-area: foot;
   background: $gold;
+}
+
+.explanation::before {
+  content: 'Animation Here';
+  position: absolute;
+  display: block;
+  height: 128%;
+  width: 14.2%;
+  left: 42.9%;
+  background-color: $red;
+  border: 3px solid $gold;
 }
