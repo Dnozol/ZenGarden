@@ -14,9 +14,17 @@ $L:     1600px;
   @else if $canvas == M {
    @media only screen and (min-width: $M) { @content; } 
   }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
+
+  @else if $canvas==L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
   }
+}
+
+//header image
+#zen-intro header {
+  background-image: url(../images/comic.jpeg);
 }
 
 // super light grid - it works with the .cd-container class inside style.scss
@@ -39,7 +47,8 @@ $L:     1600px;
                        ". reqs reqs . . . ."
                        "foot foot foot foot foot foot foot";
   border: 3px solid $gold;
-  > div {
+
+  >div {
     border: 2px solid $red;
   }
 }
@@ -87,13 +96,15 @@ $L:     1600px;
 .requirements {
   grid-area: reqs;
   color: $white;
-  background-color:$darkblue;
-  > p {
-    color:$white;
+  background-color: $darkblue;
+
+  >p {
+    color: $white;
     border: 2px solid $gold;
     margin: 1em;
   }
-  > h3 {
+
+  >h3 {
     margin: auto;
     text-align: center;
   }
@@ -103,6 +114,13 @@ $L:     1600px;
 footer {
   grid-area: foot;
   background: $gold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5%;
 }
 
 .explanation::before {
@@ -114,4 +132,13 @@ footer {
   left: 42.9%;
   background-color: $red;
   border: 3px solid $gold;
+}
+
+
+//Colors
+footer a{
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: $darkblue;
+  color: $white;
 }
