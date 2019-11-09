@@ -93,6 +93,7 @@ $L: 1600px;
 
 }
 
+//Sticky footer rulesets size increase of the footer
 footer {
   grid-area: foot;
   background: $gold;
@@ -102,9 +103,13 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
+  padding: 1.5%;
 }
 
+//Colors
 footer a{
   margin-top: auto;
   margin-bottom: auto;
+  background-color: $darkblue;
+  color: $white;
 }
