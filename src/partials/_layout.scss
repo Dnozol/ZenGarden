@@ -1,21 +1,29 @@
 @import './colors';
 // breakpoints
-   
-$S:     768px;   
-$M:     1024px;     
-$L:     1600px;   
+
+$S: 768px;
+$M: 1024px;
+$L: 1600px;
 
 // media queries
 
 @mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
+  @if $canvas==S {
+    @media only screen and (min-width: $S) {
+      @content;
+    }
   }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
+
+  @else if $canvas==M {
+    @media only screen and (min-width: $M) {
+      @content;
+    }
   }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
+
+  @else if $canvas==L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
   }
 }
 
@@ -36,14 +44,15 @@ $L:     1600px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: ". expl expl . reqs reqs . "
-                       ". expl expl . reqs reqs . "
-                       ". . . . reqs reqs . "
-                       ". part part . . . ."
-                       ". part part . bene bene ."
-                       ". part part . bene bene ."
-                       "foot foot foot foot foot foot foot";
+    ". expl expl . reqs reqs . "
+    ". . . . reqs reqs . "
+    ". part part . . . ."
+    ". part part . bene bene ."
+    ". part part . bene bene ."
+    "foot foot foot foot foot foot foot";
   border: 3px solid $gold;
-  > div {
+
+  >div {
     border: 2px solid $red;
   }
 }
@@ -51,28 +60,33 @@ $L:     1600px;
 .explanation {
   grid-area: expl;
 }
+
 .participation {
   grid-area: part;
 }
 
 .benefits {
-  color:$white;
-  p { 
-    background-color:$lightblue;
+  color: $white;
+
+  p {
+    background-color: $lightblue;
   }
+
   grid-area: bene;
 }
 
 .requirements {
   grid-area: reqs;
   color: $white;
-  background-color:$darkblue;
-  > p {
-    color:$white;
+  background-color: $darkblue;
+
+  >p {
+    color: $white;
     border: 2px solid $gold;
     margin: 1em;
   }
-  > h3 {
+
+  >h3 {
     margin: auto;
     text-align: center;
   }
@@ -82,4 +96,15 @@ $L:     1600px;
 footer {
   grid-area: foot;
   background: $gold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a{
+  margin-top: auto;
+  margin-bottom: auto;
 }
