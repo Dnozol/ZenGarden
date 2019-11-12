@@ -27,9 +27,26 @@ $L: 1600px;
   }
 }
 
-//header image
+//header layout
 #zen-intro header {
-  background-image: url(../images/comic.jpeg);
+  background-color: $red;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//header layout continued
+.intro{
+  margin: 0;
+}
+
+//Weird Content after Header: summary and preamble classes
+.summary, .preamble{
+  padding: 5vh;
+  background-color: $white;
 }
 
 // super light grid - it works with the .cd-container class inside style.scss
