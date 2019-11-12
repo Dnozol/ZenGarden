@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import './colors';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,4 +46,21 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+//Please note that this is a temporary placement
+aside{
+	display: none;
+}
+
+//Centering of the font in the footer
+footer a{
+	border: 1px solid $darkblue;
+	margin-bottom: auto;
+	margin-top: auto;
+	padding: 2.5vw;
+}
+
+//Curves the middle child in the utility belt
+footer a:nth-child(3){
+	border-radius: 50%;
 }

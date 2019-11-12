@@ -1,40 +1,52 @@
 @import './colors';
 // breakpoints
-   
-$S:     768px;   
-$M:     1024px;     
-$L:     1600px;   
+
+$S: 768px;
+$M: 1024px;
+$L: 1600px;
 
 // media queries
 
 @mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
+  @if $canvas==S {
+    @media only screen and (min-width: $S) {
+      @content;
+    }
   }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
+
+  @else if $canvas==M {
+    @media only screen and (min-width: $M) {
+      @content;
+    }
   }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
+
+  @else if $canvas==L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
   }
 }
 
-//header image
+//header layout
 #zen-intro header {
- //background-image: url(../images/"comic.jpeg");
- background-position: center;
- background-repeat: no-repeat;
- //background-attatchment: fixed;
- background-size: cover;
- background-color: red;
-
- padding: 20px;
-
+  background-color: $red;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-//delete section, do we really need this section and the following one?
-.summary #zen-summary{
-  display: none;
+//header layout continued
+.intro{
+  margin: 0;
+}
+
+//Weird Content after Header: summary and preamble classes
+.summary, .preamble{
+  padding: 5vh;
+  background-color: $white;
 }
 
 // super light grid - it works with the .cd-container class inside style.scss
@@ -46,38 +58,41 @@ $L:     1600px;
 
 // main will be one grid container
 .main {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". expl expl . reqs reqs . "
-                       ". expl expl . reqs reqs . "
-                       ". . . . reqs reqs . "
-                       ". part part . . . ."
-                       ". part part . bene bene ."
-                       ". part part . bene bene ."
+  grid-template-areas: ". expl expl . part part . "
+                       ". expl expl . part part . "
+                       ". . . . part part . "
+                       ". reqs reqs . . . ."
+                       ". reqs reqs . bene bene ."
+                       ". reqs reqs . . . ."
                        "foot foot foot foot foot foot foot";
+
   border: 3px solid $gold;
-  > div {
+
+  >div {
     border: 2px solid $red;
   }
 }
 
 .explanation {
   grid-area: expl;
+  color: $white;
+  background-color:$lightblue;
+  > p {
+    color:$white;
+    border: 2px solid $gold;
+    margin: 1em;
+  }
+  > h3 {
+    margin: auto;
+    text-align: center;
+  }
 }
+
 .participation {
   grid-area: part;
-}
-
-.benefits {
-  color:$white;
-  p { 
-    background-color:$lightblue;
-  }
-  grid-area: bene;
-}
-
-.requirements {
-  grid-area: reqs;
   color: $white;
   background-color:$darkblue;
   > p {
@@ -89,10 +104,67 @@ $L:     1600px;
     margin: auto;
     text-align: center;
   }
+}
+
+.benefits {
+  background-color:$lightblue;
+  color:$white;
+
+  > h3 {
+    margin: auto;
+    text-align: center;
+  }
+
+  grid-area: bene;
+}
+
+.requirements {
+  grid-area: reqs;
+  color: $white;
+  background-color: $darkblue;
+
+  >p {
+    color: $white;
+    border: 2px solid $gold;
+    margin: 1em;
+  }
+
+  >h3 {
+    margin: auto;
+    text-align: center;
+  }
 
 }
 
+//Sticky footer rulesets size increase of the footer
 footer {
   grid-area: foot;
   background: $gold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5%;
+}
+
+.explanation::before {
+  content: 'Animation Here';
+  position: absolute;
+  display: block;
+  height: 128%;
+  width: 14.2%;
+  left: 42.9%;
+  background-color: $red;
+  border: 3px solid $gold;
+}
+
+
+//Colors
+footer a{
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: $darkblue;
+  color: $white;
 }
