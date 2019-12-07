@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     margin: 1em 0;
 
     @include MQ(S) {
@@ -59,7 +59,8 @@ p {
 }
 
 header h1, h2{
-    color: $white;
+    color: $darkblue;
+    font-size: 3.5rem;
     font-weight: bold;
 
 }
