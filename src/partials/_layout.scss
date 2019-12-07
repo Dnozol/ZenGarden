@@ -61,12 +61,12 @@ $L: 1600px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". expl expl . part part . "
-                       ". expl expl . part part . "
-                       ". . . . part part . "
-                       ". reqs reqs . . . ."
-                       ". reqs reqs . bene bene ."
-                       ". reqs reqs . . . ."
+  grid-template-areas: "expl expl expl . . . . "
+                       "expl expl expl part part part part "
+                       ". . . part part part part "
+                       ". reqs reqs reqs . . ."
+                       ". reqs reqs reqs . bene bene"
+                       ". reqs reqs reqs . . ."
                        "foot foot foot foot foot foot foot";
 
   border: 3px solid $gold;
@@ -148,18 +148,6 @@ footer {
   width: 100%;
   padding: 1.5%;
 }
-
-.explanation::before {
-  content: 'Animation Here';
-  position: absolute;
-  display: block;
-  height: 128%;
-  width: 14.2%;
-  left: 42.9%;
-  background-color: $red;
-  border: 3px solid $gold;
-}
-
 
 //Colors
 footer a{
