@@ -7,7 +7,7 @@ xTypography
 
 h1,
 h2 {
-    font-family: $secondary-font;
+    font-family: $primary-font;
     color: $lightblue;
 }
 
@@ -58,11 +58,18 @@ p {
     }
 }
 
-header h1, h2{
+header h1 {
     color: $darkblue;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: bold;
+    text-transform: uppercase !important;
 
+}
+
+header  h2{
+    color: $darkblue;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 abbr {
