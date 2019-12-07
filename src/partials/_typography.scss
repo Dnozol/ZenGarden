@@ -45,7 +45,7 @@ section > h2::before {
 p {
     font-size: 1.4rem;
     line-height: 1.4;
-    color: lighten($blue, 25%);
+    color: lighten($lightblue, 25%);
 
     a {
         color: $darkblue;
@@ -60,4 +60,6 @@ p {
 
 header h1, h2{
     color: $white;
+    font-weight: bold;
+
 }
