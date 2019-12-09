@@ -7,7 +7,7 @@ xTypography
 
 h1,
 h2 {
-    font-family: $secondary-font;
+    font-family: $primary-font;
     color: $lightblue;
 }
 
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     margin: 1em 0;
 
     @include MQ(S) {
@@ -58,6 +58,20 @@ p {
     }
 }
 
-header h1, h2{
-    color: $white;
+header h1 {
+    color: $darkblue;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase !important;
+
+}
+
+header  h2{
+    color: $darkblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+abbr {
+    text-decoration: none;
 }
