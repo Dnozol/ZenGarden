@@ -28,11 +28,15 @@ $L: 1600px;
 }
 
 @mixin titleStyle {
-  padding-top: 75px;
-  text-align: center;
-  height: 169px;
-  width: 374px;
-  color: $darkblue;
+  h3{
+    padding-top: 75px;
+    text-align: center;
+    height: 169px;
+    width: 374px;
+    color: $darkblue;
+    background-image: url('../src/images/starburst1.png');
+    background-size: cover;
+  }
 }
 
 //header layout
@@ -105,12 +109,10 @@ $L: 1600px;
     border: 2px solid $gold;
     margin: 1em;
   }
-  h3 {
-    @include titleStyle;
+  
+  @include titleStyle;
 
-    background-image: url('../src/images/starburst1.png');
-    background-size: cover;
-  }
+  
 }
 .participation {
 
@@ -124,11 +126,9 @@ $L: 1600px;
     border: 2px solid $gold;
     margin: 1em;
   }
-  h3 {
-    @include titleStyle;
-    background-image: url('../src/images/starburst1.png');
-    background-size: cover;
-  }
+  
+  @include titleStyle;
+  
 }
 
 .benefits {
@@ -157,11 +157,9 @@ $L: 1600px;
     margin: 1em;
   }
 
-  h3 {
-    @include titleStyle;
-    background-image: url('../src/images/starburst1.png');
-    background-size: cover;
-  }
+  
+  @include titleStyle;
+  
 
 }
 
