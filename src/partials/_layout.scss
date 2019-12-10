@@ -156,34 +156,8 @@ $L: 1600px;
     border: 2px solid $gold;
     margin: 1em;
   }
-
-  
   @include titleStyle;
-  
-
 }
-
-//Sticky footer rulesets size increase of the footer
-footer {
-  grid-area: foot;
-  background: $gold;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  padding: 1.5%;
-}
-
-//Colors
-footer a{
-  margin-top: auto;
-  margin-bottom: auto;
-  background-color: $darkblue;
-  color: $white;
-}
-
 
 
 //The other zen gardens
