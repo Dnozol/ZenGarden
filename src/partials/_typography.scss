@@ -51,6 +51,9 @@ p {
         color: $darkred;
         text-decoration: none;
         text-transform: uppercase;
+        &:hover {
+            color: $gold;
+        }
     }
 
     @include MQ(S) {
