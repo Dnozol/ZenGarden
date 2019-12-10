@@ -72,6 +72,11 @@ section:nth-of-type(1) h2::before {
   background-color: $platinum;
 }
 
+.preamble h3 {
+  color: $red;
+  margin-bottom: .35em;
+}
+
 // super light grid - it works with the .cd-container class inside style.scss
 
 @mixin column($percentage, $float-direction:left) {
