@@ -29,6 +29,8 @@ $L: 1600px;
 
 @mixin titleStyle {
   h3{
+    margin-left: 15%;
+    margin-top: 15px;
     padding-top: 75px;
     text-align: center;
     height: 169px;
@@ -36,6 +38,10 @@ $L: 1600px;
     color: $darkblue;
     background-image: url('../src/images/starburst1.png');
     background-size: cover;
+    transition: .1s linear;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -78,14 +84,8 @@ $L: 1600px;
 // main will be one grid container
 .main {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "expl expl ."
-                       "part . bene"
-                       "part . ."
-                       "part reqs reqs"
-                       ". reqs reqs"
-                       "foot foot foot";
+  height: 300px;
+  display: block;
   a {
     color: lightgreen;
   }
@@ -100,7 +100,7 @@ $L: 1600px;
 
 .explanation {
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-area: expl;
   color: $white;
   background-color:$lightblue;
@@ -117,7 +117,7 @@ $L: 1600px;
 .participation {
 
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-area: part;
   color: $white;
   background-color:$darkblue;
@@ -142,11 +142,14 @@ $L: 1600px;
 
   grid-area: bene;
 }
+aside {
+  display: none;
+}
 
 .requirements {
   justify-content: center;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-area: reqs;
   color: $white;
   background-color: $darkblue;
@@ -194,6 +197,7 @@ $L: 1600px;
 
 @media only screen and (min-width: $L){
   .main{
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "expl expl expl . . . . "
                         "expl expl expl part part part part "
@@ -207,6 +211,7 @@ $L: 1600px;
 
 @media only screen and (min-width: $M){
   .main{
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "expl expl expl ."
                         "expl expl expl ."
@@ -217,5 +222,12 @@ $L: 1600px;
                         ". reqs reqs reqs"
                         ". bene bene ."
                         "foot foot foot foot";
+  }
+  
+}
+
+@media only screen and (min-width: $S) {
+  .requirements, .participation, .explanation {
+    grid-template-columns: 1fr 1fr;
   }
 }
