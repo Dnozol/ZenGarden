@@ -45,11 +45,12 @@ section > h2::before {
 p {
     font-size: 1.4rem;
     line-height: 1.4;
-    color: lighten($lightblue, 25%);
+    color: lighten($darkblue, 25%);
 
     a {
-        color: $darkblue;
-        text-decoration: underline;
+        color: $darkred;
+        text-decoration: none;
+        text-transform: uppercase;
     }
 
     @include MQ(S) {
