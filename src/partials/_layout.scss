@@ -37,7 +37,7 @@ $L: 1600px;
     color: $darkblue;
     background-image: url('../src/images/starburst1.png');
     background-size: cover;
-    transition: .1s linear;
+    transition: .1s linear infinite;
     &:hover {
       transform: scale(1.2);
     }
