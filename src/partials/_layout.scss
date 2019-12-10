@@ -57,6 +57,10 @@ $L: 1600px;
   margin: 0;
 }
 
+section:nth-of-type(1) h2::before {
+  display: none;
+}
+
 //Weird Content after Header: summary and preamble classes
 .summary, .preamble{
   padding: 5vh;
