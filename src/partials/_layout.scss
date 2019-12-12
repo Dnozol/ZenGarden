@@ -39,9 +39,7 @@ $L: 1600px;
     background-size: cover;
     transition: .1s linear infinite;
 
-    &:hover {
-      transform: scale(1.2);
-    }
+    
   }
 }
 
@@ -227,6 +225,8 @@ footer a:nth-child(3):hover {
     height: 175%;
     font-size: 25px;
   }
+
+  
 }
 
 @media only screen and (min-width: $M) {
@@ -237,7 +237,13 @@ footer a:nth-child(3):hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-
+  
+  h3 {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  
   //Utility Belt Stylings
   footer {
     background: $gold;
