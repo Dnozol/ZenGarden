@@ -47,14 +47,14 @@ $L: 1600px;
 
 @mixin gridStyleMain {
   display: grid;
-  grid-gap: 1em;
   grid-template-columns: 1fr;
   margin: 10px;
 
   p {
     color: $white;
     padding: 10px;
-    border: 1px solid $gold;
+    border: 3px solid $white;
+    border-bottom: 5px solid $white;
   }
 
 }
@@ -189,22 +189,6 @@ footer a:nth-child(3):hover {
   font-size: 50px;
 }
 
-//End of Utility Belt Stylings
-
-
-//The other zen gardens
-// .design-selection {
-//   li{
-//     a{
-//       display:block;
-//     }
-    
-//     text-align: center;
-//     height: 169px;
-//     width: 374px;
-    
-//   }
-// }
 
 @media only screen and (min-width: $L) {
   footer {
