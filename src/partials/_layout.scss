@@ -38,10 +38,6 @@ $L: 1600px;
     background-image: url('../src/images/starburst1.png');
     background-size: cover;
     transition: .1s linear infinite;
-
-    &:hover {
-      transform: scale(1.2);
-    }
   }
 }
 
@@ -334,7 +330,7 @@ footer a:nth-child(3) {
     grid-template-columns: 1fr 1fr;
   }
 
-  //Utility Belt Styling
+  //Utility Belt Stylings
   footer {
     background: $gold;
     display: flex; //x
@@ -355,7 +351,7 @@ footer a:nth-child(3) {
     align-items: center;
     border: 10px solid #F7DCA3;
     background-color: #FFC13D;
-    width: 90px; //x
+    width: 100px; //x
     height: 125%; //x
     margin-top: 15px;
     margin-bottom: 15px;
@@ -368,9 +364,19 @@ footer a:nth-child(3) {
   
   footer a:nth-child(3) {
     border-radius: 50%;
-    width: 120px;
+    width: 80px;
     height: 175%;
     font-size: 20px;
+  }
+  
+  footer a:hover {
+    transform: translate(0px, -10px);
+    font-size: 24px;
+  }
+  
+  footer a:nth-child(3):hover {
+    transform: translate(0px, -5px);
+    font-size: 40px;
   }
 }
 
