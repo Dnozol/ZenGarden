@@ -28,7 +28,7 @@ $L: 1600px;
 }
 
 @mixin titleStyle {
-  h3{
+  h3 {
     margin-left: 15%;
     padding-top: 75px;
     text-align: center;
@@ -38,6 +38,7 @@ $L: 1600px;
     background-image: url('../src/images/starburst1.png');
     background-size: cover;
     transition: .1s linear infinite;
+
     &:hover {
       transform: scale(1.2);
     }
@@ -45,20 +46,21 @@ $L: 1600px;
 }
 
 @mixin gridStyleMain {
-  display:grid;
+  display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
   margin: 10px;
+
   p {
     color: $white;
     padding: 10px;
     border: 1px solid $gold;
   }
- 
+
 }
 
 //header layout
-#zen-intro header { 
+#zen-intro header {
   //background-color: $lightblue;
   background-image: url("./images/comics.jpeg");
   background-repeat: no-repeat;
@@ -80,7 +82,8 @@ section:nth-of-type(1) h2::before {
 }
 
 //Weird Content after Header: summary and preamble classes
-.summary, .preamble {
+.summary,
+.preamble {
   padding: 5vh;
   background-color: $platinum;
 }
@@ -108,34 +111,39 @@ section:nth-of-type(1) h2::before {
   width: 80%;
   height: 300px;
   float: right;
+
   a {
     color: lightgreen;
   }
+
   div {
     margin: 20px 5px;
   }
 }
 
 .explanation {
-  
-  background-color:$lightblue;
-  @include gridStyleMain;
-  @include titleStyle;  
-}
-.participation {
 
-  background-color:$darkblue;
+  background-color: $lightblue;
   @include gridStyleMain;
   @include titleStyle;
-  
+}
+
+.participation {
+
+  background-color: $darkblue;
+  @include gridStyleMain;
+  @include titleStyle;
+
 }
 
 .benefits {
-  background-color:$lightblue;
+  background-color: $lightblue;
+
   p {
     color: $white;
   }
-  > h3 {
+
+  >h3 {
     margin: auto;
     text-align: center;
   }
@@ -143,7 +151,7 @@ section:nth-of-type(1) h2::before {
 }
 
 .requirements {
-  
+
   color: $white;
   background-color: $darkblue;
 
@@ -151,6 +159,7 @@ section:nth-of-type(1) h2::before {
     color: $white;
     border: 2px solid $gold;
   }
+
   @include gridStyleMain;
   @include titleStyle;
 }
@@ -164,70 +173,71 @@ aside {
 }
 
 //Utility Belt Stylings
-footer{
-	background: $gold;
-	display: flex;//x
-	justify-content: space-evenly;//x
-	align-items: flex-end;//x
-	position: sticky;//x
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
-	height: 30%;
+footer {
+  background: $gold;
+  display: flex; //x
+  justify-content: space-evenly; //x
+  align-items: flex-end; //x
+  position: sticky; //x
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30%;
   overflow: visible;
-  border-top: 10px solid $gold;
 }
-  
-  footer{
-    background-color: $gold;
-    
-    a{
-      display: flex;               
-      justify-content: center;
-      align-items: center;
-      border: 10px solid #F7DCA3;
-      background-color: #FFC13D;
-      width: 10.5%;//x
-      height: 145%;//x
-      margin-top: 15px;
-      margin-bottom: 15px;
-      text-decoration: none;
-      color: white !important;//x
-      font-family: arial;
-      transition: .3s;
-    } 
-  }
-  
-  a:nth-child(3){
-	   border-radius: 50%;
-	   width: 17.5%;
-	   height: 175%;
-	  font-size: 25px;
-	 }
-  
-  footer a:hover{
-	transform: translate(0px, -10px);
-	font-size: 30px;
-  }
-  
-  footer a:nth-child(3):hover{
-	transform: translate(0px, -10px);
-	font-size: 50px;
-  }
 
-  //End of Utility Belt Stylings
+footer {
+  background-color: $gold;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #F7DCA3;
+    background-color: #FFC13D;
+    width: 10.5%; //x
+    height: 125%; //x
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white !important; //x
+    font-family: arial;
+    transition: .3s;
+  }
+}
+
+a:nth-child(3) {
+  border-radius: 50%;
+  width: 17.5%;
+  height: 175%;
+  font-size: 25px;
+}
+
+footer a:hover {
+  transform: translate(0px, -10px);
+  font-size: 30px;
+}
+
+footer a:nth-child(3):hover {
+  transform: translate(0px, -5px);
+  font-size: 50px;
+}
+
+//End of Utility Belt Stylings
 
 
 //The other zen gardens
 .design-selection {
   width: 20%;
-  li:nth-child(odd){
-    a{
-      display:block;
+
+  li:nth-child(odd) {
+    a {
+      display: block;
     }
+
     padding-top: 60px;
-    
+
     text-align: center;
     height: 169px;
     width: 374px;
@@ -236,14 +246,17 @@ footer{
     background-size: cover;
   }
 }
+
 .design-selection {
   width: 20%;
-  li:nth-child(even){
-    a{
-      display:block;
+
+  li:nth-child(even) {
+    a {
+      display: block;
     }
+
     padding-top: 60px;
-    
+
     text-align: center;
     height: 169px;
     width: 374px;
@@ -253,63 +266,100 @@ footer{
   }
 }
 
-@media only screen and (min-width: $L){
-  
-}
+@media only screen and (min-width: $L) {}
 
-@media only screen and (min-width: $M){
-  .requirements, .participation, .explanation {
+@media only screen and (min-width: $M) {
+
+  .requirements,
+  .participation,
+  .explanation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   //Utility Belt Stylings
-footer{
-	background: $gold;
-	display: flex;//x
-	justify-content: space-evenly;//x
-	align-items: flex-end;//x
-	position: sticky;//x
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
-	height: 30%;
-  overflow: visible;
-  border-top: 10px solid $gold;
-}
-  
-  footer{
-    background-color: $gold;
-    
-    a{
-      display: flex;               
-      justify-content: center;
-      align-items: center;
-      border: 10px solid #F7DCA3;
-      background-color: #FFC13D;
-      width: 10.5%;//x
-      height: 145%;//x
-      margin-top: 15px;
-      margin-bottom: 15px;
-      text-decoration: none;
-      color: white !important;//x
-      font-family: arial;
-      transition: .3s;
-    } 
+  footer {
+    background: $gold;
+    display: flex; //x
+    justify-content: space-evenly; //x
+    align-items: flex-end; //x
+    position: sticky; //x
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    overflow: visible;
   }
-  
-  a:nth-child(3){
-	   border-radius: 50%;
-	   width: 17.5%;
-	   height: 175%;
-	  font-size: 25px;
-	 }
+
+  footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #F7DCA3;
+    background-color: #FFC13D;
+    width: 10.5%; //x
+    height: 125%; //x
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white !important; //x
+    font-family: arial;
+    transition: .3s;
+  }
+
+  a:nth-child(3) {
+    border-radius: 50%;
+    width: 17.5%;
+    height: 175%;
+    font-size: 25px;
+  }
 }
 
 @media only screen and (min-width: $S) {
-  .requirements, .participation, .explanation {
+
+  .requirements,
+  .participation,
+  .explanation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  //Utility Belt Stylings
+  footer {
+    background: $gold;
+    display: flex; //x
+    justify-content: space-evenly; //x
+    align-items: flex-end; //x
+    position: sticky; //x
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    overflow: visible;
+  }
+
+  footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #F7DCA3;
+    background-color: #FFC13D;
+    width: 10.5%; //x
+    height: 125%; //x
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white !important; //x
+    font-family: arial;
+    transition: .3s;
+  }
+
+  a:nth-child(3) {
+    border-radius: 50%;
+    width: 17.5%;
+    height: 175%;
+    font-size: 25px;
   }
 }
