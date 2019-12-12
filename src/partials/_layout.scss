@@ -105,9 +105,8 @@ section:nth-of-type(1) h2::before {
 
 // main will be one grid container
 .main {
-  width: 80%;
-  height: 300px;
-  float: right;
+  width: 100%;
+  height: 100%;
   a {
     color: lightgreen;
   }
@@ -170,26 +169,25 @@ footer{
 	justify-content: space-evenly;//x
 	align-items: flex-end;//x
 	position: sticky;//x
+	padding: 1.5%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
 	height: 30%;
   overflow: visible;
-  border-top: 10px solid $gold;
 }
   
   footer{
-    background-color: $gold;
-    
+	  background-color: #f7d281;
     a{
       display: flex;               
       justify-content: center;
       align-items: center;
       border: 10px solid #F7DCA3;
       background-color: #FFC13D;
-      width: 10.5%;//x
-      height: 145%;//x
+      width: 12.5%;//x
+      height: 170%;//x
       margin-top: 15px;
       margin-bottom: 15px;
       text-decoration: none;
@@ -220,39 +218,18 @@ footer{
 
 
 //The other zen gardens
-.design-selection {
-  width: 20%;
-  li:nth-child(odd){
-    a{
-      display:block;
-    }
-    padding-top: 60px;
+// .design-selection {
+//   li{
+//     a{
+//       display:block;
+//     }
     
-    text-align: center;
-    height: 169px;
-    width: 374px;
-    z-index: 25;
-    background-image: url('../src/images/starburst1.png');
-    background-size: cover;
-  }
-}
-.design-selection {
-  width: 20%;
-  li:nth-child(even){
-    a{
-      display:block;
-    }
-    padding-top: 60px;
+//     text-align: center;
+//     height: 169px;
+//     width: 374px;
     
-    text-align: center;
-    height: 169px;
-    width: 374px;
-    z-index: 25;
-    background-image: url('../src/images/starburst2.png');
-    background-size: cover;
-  }
-}
-
+//   }
+// }
 @media only screen and (min-width: $L){
   
 }
@@ -262,49 +239,6 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-
-  //Utility Belt Stylings
-footer{
-	background: $gold;
-	display: flex;//x
-	justify-content: space-evenly;//x
-	align-items: flex-end;//x
-	position: sticky;//x
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
-	height: 30%;
-  overflow: visible;
-  border-top: 10px solid $gold;
-}
-  
-  footer{
-    background-color: $gold;
-    
-    a{
-      display: flex;               
-      justify-content: center;
-      align-items: center;
-      border: 10px solid #F7DCA3;
-      background-color: #FFC13D;
-      width: 10.5%;//x
-      height: 145%;//x
-      margin-top: 15px;
-      margin-bottom: 15px;
-      text-decoration: none;
-      color: white !important;//x
-      font-family: arial;
-      transition: .3s;
-    } 
-  }
-  
-  a:nth-child(3){
-	   border-radius: 50%;
-	   width: 17.5%;
-	   height: 175%;
-	  font-size: 25px;
-	 }
 }
 
 @media only screen and (min-width: $S) {
