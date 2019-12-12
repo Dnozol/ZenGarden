@@ -27,7 +27,7 @@ $L: 1600px;
   }
 }
 
-@mixin titleStyle {
+@mixin titleStyle($rotate) {
   h3 {
     margin-left: 15%;
     padding-top: 75px;
@@ -40,7 +40,8 @@ $L: 1600px;
     transition: .1s linear infinite;
     
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.2) rotate($rotate);
+      font-size: 2em;
     }
   }
 
@@ -136,20 +137,20 @@ section:nth-of-type(1) h2::before {
 
   background-color: $lightblue;
   @include gridStyleMain;
-  @include titleStyle;
+  @include titleStyle(-25deg);
 }
 
 .participation {
 
   background-color: $darkblue;
   @include gridStyleMain;
-  @include titleStyle;
+  @include titleStyle(25deg);
 
 }
 
 .benefits {
   background-color: $lightblue;
-
+  font-style: italic;
   p {
     color: $white;
   }
@@ -173,7 +174,7 @@ section:nth-of-type(1) h2::before {
   }
 
   @include gridStyleMain;
-  @include titleStyle;
+  @include titleStyle(-25deg);
 }
 
 
@@ -270,6 +271,7 @@ footer a:nth-child(3) {
 
 @media only screen and (min-width: $M) {
 
+  
   .requirements,
   .participation,
   .explanation {
@@ -334,6 +336,20 @@ footer a:nth-child(3) {
   .explanation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .participation{
+    h3{
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .requirements {
+    h3{
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
   }
 
   //Utility Belt Stylings
