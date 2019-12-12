@@ -94,7 +94,6 @@ section:nth-of-type(1) h2::before {
 .main {
   width: 100%;
   height: 300px;
-  display: block;
   a {
     color: lightgreen;
   }
@@ -114,6 +113,7 @@ section:nth-of-type(1) h2::before {
   > p {
     color:$white;
     border: 2px solid $gold;
+    margin: 1em;
   }
   
   @include titleStyle;
@@ -130,6 +130,7 @@ section:nth-of-type(1) h2::before {
   > p {
     color:$white;
     border: 2px solid $gold;
+    margin: 1em;
   }
   
   @include titleStyle;
@@ -138,9 +139,8 @@ section:nth-of-type(1) h2::before {
 
 .benefits {
   background-color:$lightblue;
-  > p {
-    color:$white;
-  }
+  color:$white;
+
   > h3 {
     margin: auto;
     text-align: center;
@@ -150,6 +150,9 @@ section:nth-of-type(1) h2::before {
 }
 aside {
   display: none;
+  li {
+    color: green;
+  }
 }
 
 //Utility Belt Stylings
@@ -167,26 +170,26 @@ footer{
 	width: 100%;
 	height: 30%;
   overflow: visible;
-}
+  }
   
-footer{
+  footer{
 	background-color: #f7d281;
-  a{
-    display: flex;               
-    justify-content: center;
-    align-items: center;
-    border: 10px solid #F7DCA3;
-    background-color: #FFC13D;
-    width: 12.5%;//x
-    height: 170%;//x
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: white !important;//x
-    font-family: arial;
-    transition: .3s;
-  } 
-}
+    a{
+	display: flex;               
+	justify-content: center;
+	align-items: center;
+	border: 10px solid #F7DCA3;
+	background-color: #FFC13D;
+	width: 12.5%;//x
+	height: 170%;//x
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-decoration: none;
+	color: white !important;//x
+	font-family: arial;
+	transition: .3s;
+	} 
+  }
   
   a:nth-child(3){
 	   border-radius: 50%;
@@ -196,13 +199,13 @@ footer{
 	 }
   
   footer a:hover{
-    transform: translate(0px, -10px);
-    font-size: 30px;
+	transform: translate(0px, -10px);
+	font-size: 30px;
   }
   
   footer a:nth-child(3):hover{
-    transform: translate(0px, -10px);
-    font-size: 50px;
+	transform: translate(0px, -10px);
+	font-size: 50px;
   }
 
   //End of Utility Belt Stylings
@@ -215,7 +218,7 @@ footer{
   color: $white;
   background-color: $darkblue;
 
-  >p {
+  p {
     color: $white;
     border: 2px solid $gold;
   }
@@ -256,6 +259,7 @@ footer{
 }
 
 @media only screen and (min-width: $L){
+  footer { height: 100%;}
   .main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -288,7 +292,6 @@ footer{
 
 @media only screen and (min-width: $S) {
   .requirements, .participation, .explanation {
-    grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
   }
 }
