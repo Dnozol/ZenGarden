@@ -27,7 +27,7 @@ $L: 1600px;
   }
 }
 
-@mixin titleStyle($rotate) {
+@mixin titleStyle($rotate: 0deg) {
   h3 {
     margin-left: 15%;
     padding-top: 75px;
@@ -137,7 +137,7 @@ section:nth-of-type(1) h2::before {
 
   background-color: $lightblue;
   @include gridStyleMain;
-  @include titleStyle(-25deg);
+  @include titleStyle;
 }
 
 .participation {
@@ -257,16 +257,6 @@ footer a:nth-child(3) {
     height: 175%;
     font-size: 20px;
   }
-  
-  footer a:hover {
-    transform: translate(0px, -10px);
-    font-size: 24px;
-  }
-  
-  footer a:nth-child(3):hover {
-    transform: translate(0px, -5px);
-    font-size: 40px;
-  }
 }
 
 @media only screen and (min-width: $M) {
@@ -318,15 +308,7 @@ footer a:nth-child(3) {
       font-size: 20px;
     }
     
-    footer a:hover {
-      transform: translate(0px, -10px);
-      font-size: 24px;
-    }
-    
-    footer a:nth-child(3):hover {
-      transform: translate(0px, -5px);
-      font-size: 40px;
-    }
+
 }
 
 @media only screen and (min-width: $S) {
@@ -391,15 +373,7 @@ footer a:nth-child(3) {
     font-size: 20px;
   }
   
-  footer a:hover {
-    transform: translate(0px, -10px);
-    font-size: 24px;
-  }
-  
-  footer a:nth-child(3):hover {
-    transform: translate(0px, -5px);
-    font-size: 40px;
-  }
+
 }
 
 .design-selection, .design-archives, .zen-resources{

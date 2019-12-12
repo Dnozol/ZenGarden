@@ -1,0 +1,41 @@
+/* ------------------------------
+
+xAnimations
+
+--------------------------------- */
+
+@media only screen and (min-width: $L){
+    footer a:hover {
+        transform: translate(0px, -10px);
+        font-size: 24px;
+      }
+      
+      footer a:nth-child(3):hover {
+        transform: translate(0px, -5px);
+        font-size: 40px;
+      }
+}
+
+@media only screen and (min-width: $M){
+    footer a:hover {
+        transform: translate(0px, -10px);
+        font-size: 24px;
+      }
+      
+      footer a:nth-child(3):hover {
+        transform: translate(0px, -5px);
+        font-size: 40px;
+      }
+}
+
+@media only screen and (min-width: $S){
+    footer a:hover {
+        transform: translate(0px, -10px);
+        font-size: 24px;
+      }
+      
+      footer a:nth-child(3):hover {
+        transform: translate(0px, -5px);
+        font-size: 40px;
+      }
+}
