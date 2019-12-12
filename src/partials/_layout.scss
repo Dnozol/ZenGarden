@@ -59,6 +59,8 @@ $L: 1600px;
 
 }
 
+
+
 //header layout
 #zen-intro header {
   //background-color: $lightblue;
@@ -92,6 +94,7 @@ section:nth-of-type(1) h2::before {
   color: $red;
   margin-bottom: .35em;
   font-weight: bold;
+  text-align: center;
 }
 
 // super light grid - it works with the .cd-container class inside style.scss
@@ -172,61 +175,47 @@ aside {
   }
 }
 
-a:nth-child(3) {
+
+//footer default stylings
+footer {
+  background: $gold;
+  display: flex; //x
+  justify-content: space-evenly; //x
+  align-items: flex-end; //x
+  position: sticky; //x
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  overflow: visible;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #F7DCA3;
+  background-color: #FFC13D;
+  width: 55px; //x
+  height: 125%; //x
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white !important; //x
+  font-family: arial;
+  transition: .3s;
+  font-size: 12px;
+}
+
+footer a:nth-child(3) {
   border-radius: 50%;
-  width: 17.5%;
+  width: 80px;
   height: 175%;
-  font-size: 25px;
+  font-size: 20px;
 }
-
-footer a:hover {
-  transform: translate(0px, -10px);
-  font-size: 30px;
-}
-
-footer a:nth-child(3):hover {
-  transform: translate(0px, -5px);
-  font-size: 50px;
-}
-
 
 @media only screen and (min-width: $L) {
-  footer {
-    background: $gold;
-    display: flex; //x
-    justify-content: space-evenly; //x
-    align-items: flex-end; //x
-    position: sticky; //x
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-    overflow: visible;
-  }
-
-  footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid #F7DCA3;
-    background-color: #FFC13D;
-    width: 10.5%; //x
-    height: 125%; //x
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: white !important; //x
-    font-family: arial;
-    transition: .3s;
-  }
-
-  a:nth-child(3) {
-    border-radius: 50%;
-    width: 17.5%;
-    height: 175%;
-    font-size: 25px;
-  }
 }
 
 @media only screen and (min-width: $M) {
@@ -236,44 +225,6 @@ footer a:nth-child(3):hover {
   .explanation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  //Utility Belt Stylings
-  footer {
-    background: $gold;
-    display: flex; //x
-    justify-content: space-evenly; //x
-    align-items: flex-end; //x
-    position: sticky; //x
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-    overflow: visible;
-  }
-
-  footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid #F7DCA3;
-    background-color: #FFC13D;
-    width: 10.5%; //x
-    height: 125%; //x
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: white !important; //x
-    font-family: arial;
-    transition: .3s;
-  }
-
-  a:nth-child(3) {
-    border-radius: 50%;
-    width: 17.5%;
-    height: 175%;
-    font-size: 25px;
   }
 }
 
@@ -287,6 +238,7 @@ footer a:nth-child(3):hover {
   }
 
   //Utility Belt Stylings
+  //Utility Belt Stylings
   footer {
     background: $gold;
     display: flex; //x
@@ -297,17 +249,17 @@ footer a:nth-child(3):hover {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 30%;
+    height: 65px;
     overflow: visible;
   }
-
+  
   footer a {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 10px solid #F7DCA3;
     background-color: #FFC13D;
-    width: 10.5%; //x
+    width: 100px; //x
     height: 125%; //x
     margin-top: 15px;
     margin-bottom: 15px;
@@ -315,13 +267,24 @@ footer a:nth-child(3):hover {
     color: white !important; //x
     font-family: arial;
     transition: .3s;
+    font-size: 12px;
   }
-
-  a:nth-child(3) {
+  
+  footer a:nth-child(3) {
     border-radius: 50%;
-    width: 17.5%;
+    width: 80px;
     height: 175%;
-    font-size: 25px;
+    font-size: 20px;
+  }
+  
+  footer a:hover {
+    transform: translate(0px, -10px);
+    font-size: 24px;
+  }
+  
+  footer a:nth-child(3):hover {
+    transform: translate(0px, -5px);
+    font-size: 40px;
   }
 }
 
