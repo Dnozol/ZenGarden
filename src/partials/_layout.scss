@@ -92,9 +92,13 @@ section:nth-of-type(1) h2::before {
   background-color: $platinum;
 }
 
+.preamble{
+  padding-top: 0px;
+}
+
 .preamble h3 {
   color: $red;
-  margin-bottom: .35em;
+  margin-bottom: 2em;
   font-weight: bold;
   text-align: center;
 }
