@@ -5,10 +5,20 @@ xTypography
 
 -------------------------------- */
 
-h1,
-h2 {
-    font-family: $primary-font;
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+
+h1, h2 {
+    font-family: $tertiary-font;
     color: $lightblue;
+}
+
+h3{
+    font-family: $tertiary-font;
+}
+
+.benefits h3{
+    color: $white;
 }
 
 h1 {
@@ -61,12 +71,12 @@ p {
 
 header h1 {
     color: $darkblue;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase !important;
-    transition: 0.5s linear;
+    transition: 0.2s linear;
     &:hover{
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
 }
