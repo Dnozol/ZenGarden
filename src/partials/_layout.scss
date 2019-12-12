@@ -38,7 +38,13 @@ $L: 1600px;
     background-image: url('../src/images/starburst1.png');
     background-size: cover;
     transition: .1s linear infinite;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
   }
+
+  
 }
 
 @mixin gridStyleMain {
@@ -109,6 +115,9 @@ section:nth-of-type(1) h2::before {
 .main {
   width: 100%;
   height: 100%;
+  h3 {
+    font-size: 1.4em;
+  }
   a {
     color: lightgreen;
   }
@@ -163,13 +172,6 @@ section:nth-of-type(1) h2::before {
   @include titleStyle;
 }
 
-
-
-aside {
-  li {
-    color: green;
-  }
-}
 
 
 //footer default stylings
